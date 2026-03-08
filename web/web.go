@@ -465,6 +465,8 @@ func (s *Server) Stop() error {
 	if s.wsHub != nil {
 		s.wsHub.Stop()
 	}
+	// Stop the public-endpoint rate limiter's background cleanup goroutine.
+	controller.StopPublicRateLimiter()
 	var err1 error
 	var err2 error
 	if s.httpServer != nil {
