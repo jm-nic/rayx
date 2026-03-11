@@ -127,7 +127,7 @@ update() {
         fi
         return 0
     fi
-    bash <(curl -Ls https://raw.githubusercontent.com/cortez62/3x-ui-uuid/main/update.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/jm-nic/rayx/main/install.sh)
     if [[ $? == 0 ]]; then
         LOGI "Update is complete, Panel has automatically restarted "
         before_show_menu
